@@ -1,0 +1,10 @@
+
+body{
+    overscroll-behavior: none;
+    min-height: 100vh;
+}
+:root{
+    --color-primario:#004a91;
+    --color-secundario: white;
+    --impacto: rgb(11, 11, 11);
+}

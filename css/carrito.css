@@ -1,39 +1,16 @@
-/* Reset de algunos estilos por defecto */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
     overscroll-behavior: none;
-}
-
-header {
-    background-color: #004d8f;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
 }
 
 main {
@@ -120,7 +97,7 @@ table th {
 #checkout {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #004a91;
     color: white;
     font-size: 1.2em;
     border: none;
