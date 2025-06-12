@@ -1,7 +1,10 @@
-
+*{
+    margin: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     overscroll-behavior: none;
-    min-height: 100vh;
 }
 :root{
     --color-primario:#004a91;

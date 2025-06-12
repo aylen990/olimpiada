@@ -35,7 +35,7 @@ function actualizarCarrito() {
             <td>${item.nombre}</td>
             <td>${item.cantidad}</td>
             <td>$${item.precio * item.cantidad}</td>
-            <td><button onclick="eliminarDelCarrito('${item.nombre}')">Eliminar</button></td>
+            <td><button class="eliminar-btn" onclick="eliminarDelCarrito('${item.nombre}')">Eliminar</button></td>
         `;
         carritoTable.appendChild(row);
         total += item.precio * item.cantidad;

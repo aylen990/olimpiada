@@ -1,10 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -15,12 +9,15 @@ body {
 
 main {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    gap: 40px; /* en lugar de space-around */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 40px;
 }
 
 #productos {
     width: 60%;
+    flex: 2;
 }
 
 #productos h2 {
@@ -32,6 +29,8 @@ main {
     padding: 15px;
     margin-bottom: 20px;
     background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
 
 .producto img {
@@ -63,8 +62,10 @@ button:hover {
 
 /* Estilos del carrito */
 #carrito {
-    width: 30%;
+    flex: 1;
+    width: 40%;
     padding: 15px;
+    margin-top: 7.5%;
     border: 1px solid #ddd;
     background-color: white;
 }
@@ -115,3 +116,18 @@ footer {
     color: white;
     margin-top: 30px;
 }
+.eliminar-btn {
+    background-color: #dc3545; /* rojo tipo Bootstrap */
+    color: white;
+    border: none;
+    padding: 6px 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.eliminar-btn:hover {
+    background-color: #c82333;
+}
+
