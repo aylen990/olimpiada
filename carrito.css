@@ -1,0 +1,140 @@
+/* Reset de algunos estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overscroll-behavior: none;
+}
+
+header {
+    background-color: #004d8f;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#productos {
+    width: 60%;
+}
+
+#productos h2 {
+    margin-bottom: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.producto h3 {
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilos del carrito */
+#carrito {
+    width: 30%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+
+#carrito h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #f8f9fa;
+}
+
+#total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#checkout {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+#checkout:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d8f;
+    color: white;
+    margin-top: 30px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Agencia de Viajes</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras - Portal de Viajes</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+                <li><a href="#">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h2>Productos Disponibles</h2>
+            <div class="producto">
+                <img src="product1.jpg" alt="Paquete turístico 1">
+                <h3>Paquete a Cancún</h3>
+                <p>$1000</p>
+                <button onclick="agregarAlCarrito('Paquete a Cancún', 1000)">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="product2.jpg" alt="Paquete turístico 2">
+                <h3>Paquete a París</h3>
+                <p>$2000</p>
+                <button onclick="agregarAlCarrito('Paquete a París', 2000)">Agregar al Carrito</button>
+            </div>
+            <!-- Más productos aquí -->
+        </section>
+
+        <section id="carrito">
+            <h2>Mi Carrito</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="contenido-carrito">
+                    <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+            <p id="total">Total: $0</p>
+            <button id="checkout" onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agencia de Viajes</p>
+    </footer>
+
+    <script>
+        let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+    // Crear un objeto para el producto
+    const producto = {
+        nombre: nombre,
+        precio: precio,
+        cantidad: 1
+    };
+
+    // Verificar si el producto ya está en el carrito
+    const index = carrito.findIndex(item => item.nombre === nombre);
+    if (index !== -1) {
+        carrito[index].cantidad += 1;
+    } else {
+        carrito.push(producto);
+    }
+
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const carritoTable = document.getElementById('contenido-carrito');
+    const totalElement = document.getElementById('total');
+    
+    // Limpiar el carrito
+    carritoTable.innerHTML = '';
+
+    let total = 0;
+
+    // Agregar cada producto al carrito
+    carrito.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.nombre}</td>
+            <td>${item.cantidad}</td>
+            <td>$${item.precio * item.cantidad}</td>
+            <td><button onclick="eliminarDelCarrito('${item.nombre}')">Eliminar</button></td>
+        `;
+        carritoTable.appendChild(row);
+        total += item.precio * item.cantidad;
+    });
+
+    totalElement.textContent = `Total: $${total}`;
+}
+
+function eliminarDelCarrito(nombre) {
+    carrito = carrito.filter(item => item.nombre !== nombre);
+    actualizarCarrito();
+}
+
+function finalizarCompra() {
+    if (carrito.length === 0) {
+        alert("El carrito está vacío. No puedes finalizar la compra.");
+    } else {
+        alert("Compra finalizada. ¡Gracias por tu compra!");
+        carrito = [];
+        actualizarCarrito();
+    }
+}
+
+    </script>
+</body>
+</html>
