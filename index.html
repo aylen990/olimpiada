@@ -1,204 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Viajes</title>
-  <link rel="stylesheet" href="estilos.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      overscroll-behavior: none;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f1f2f6;
-      color: #333;
-    }
-    :root {
-      --color-primario: #004a91;
-      --color-secundario: white;
-      --impacto: rgb(11, 11, 11);
-    }
-
-    header {
-      background-color: var(--color-primario);
-      color: var(--color-secundario);
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    .slider-container {
-      margin-top: 130px;
-      position: relative;
-      width: 100%;
-      max-height: 450px;
-      overflow: hidden;
-    }
-    .slider-label {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 5px 10px;
-      border-radius: 4px;
-      z-index: 2;
-    }
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 400%;
-    }
-    .slide {
-      width: 100%;
-      flex-shrink: 0;
-    }
-    .slide img {
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-    }
-    .slider-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 3;
-    }
-    .prev {
-      left: 10px;
-    }
-    .next {
-      right: 10px;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .sobre-nosotros h2 {
-      color: var(--color-primario);
-      margin-bottom: 20px;
-    }
-    .sobre-nosotros p {
-      max-width: 800px;
-      margin: 0 auto 40px auto;
-      line-height: 1.6;
-    }
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .galeria img {
-      width: 40%;
-      max-width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: var(--color-primario);
-      color: white;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 600px) {
-      .slide img {
-        height: 600px;
-      }
-      .galeria img {
-        width: 80%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosIndex.css">
+    <title>TravelPro - Descubre el Mundo</title>
 </head>
 <body>
-  <header>
-    <h1>Viajes</h1>
-    <nav></nav>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">TravelPro</div>
+            <div class="nav-buttons">
+                <button class="btn btn-outline">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+        </nav>
+    </header>
 
-  <div class="slider-container">
-    <div class="slider-label">Slider</div>
-    <div class="slider" id="slider">
-      <div class="slide"><img src="pexels-ramazphotos-32509736.jpg" 
-        alt="imagen 1"></div>
-      <div class="slide"><img src="pexels-wanderer-731217.jpg" alt="imagen 2"></div>
-      <div class="slide"><img src="pexels-wanderer-731217.jpg" alt="imagen 3"></div>
-      <div class="slide"><img src="pexels-wanderer-731217.jpg" alt="imagen 4"></div>
-    </div>
-    <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
-    <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
-  </div>
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Descubre el Mundo</h1>
+            <p>La plataforma profesional de reservas de vuelos más confiable</p>
+            <button class="btn-cta">Comenzar Ahora</button>
+        </div>
+    </section>
 
-  <section class="sobre-nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>
-      Nuestra aerolínea fue fundada con la misión de conectar personas, culturas y destinos de manera segura y eficiente. Con más de 20 años de experiencia, ofrecemos vuelos nacionales e internacionales con altos estándares de calidad y atención personalizada.
-    </p>
-    <div class="galeria">
-      <img src="https://thvnext.bing.com/th/id/OIP.j6gWd5U5fyD3lZV6luZURwAAAA?cb=thvnext&rs=1&pid=ImgDetMain" alt="Foto historia 1">
-      <img src="https://thvnext.bing.com/th/id/OIP.j6gWd5U5fyD3lZV6luZURwAAAA?cb=thvnext&rs=1&pid=ImgDetMain" alt="Foto historia 2">
-      <img src="https://thvnext.bing.com/th/id/OIP.j6gWd5U5fyD3lZV6luZURwAAAA?cb=thvnext&rs=1&pid=ImgDetMain" alt="Foto historia 3">
-      <img src="https://thvnext.bing.com/th/id/OIP.j6gWd5U5fyD3lZV6luZURwAAAA?cb=thvnext&rs=1&pid=ImgDetMain" alt="Foto historia 4">
-      <img src="https://thvnext.bing.com/th/id/OIP.j6gWd5U5fyD3lZV6luZURwAAAA?cb=thvnext&rs=1&pid=ImgDetMain" alt="Foto historia 3">
-      <img src="https://thvnext.bing.com/th/id/OIP.j6gWd5U5fyD3lZV6luZURwAAAA?cb=thvnext&rs=1&pid=ImgDetMain" alt="Foto historia 4">
-    </div>
-  </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir TravelPro?</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">
+                La plataforma de confianza para agentes de viajes y viajeros profesionales
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Reservas Seguras</h3>
+                    <p>Sistema de reservas confiable con confirmación instantánea y protección total de tus datos.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Destinos Globales</h3>
+                    <p>Acceso a vuelos hacia los destinos más populares del mundo con precios competitivos.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍💼</div>
+                    <h3>Servicio Premium</h3>
+                    <p>Atención personalizada y herramientas profesionales para agentes de viajes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer></footer>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Destinos Disponibles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Soporte Técnico</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number success">99%</div>
+                    <div class="stat-label">Tasa de Éxito</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    const nav = `
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="registro.html">Mi Cuenta</a></li>
-          <li><a href="carrito.html">Carrito</a></li>
-        </ul>
-      </nav>`;
-    const footer = `<p>&copy; 2025 Olimpíada de Programación</p>`;
-    document.querySelector('nav').innerHTML = nav;
-    document.querySelector('footer').innerHTML = footer;
+    <!-- Client Section -->
+    <section class="client-section">
+        <div class="container">
+            <button class="client-button">Soy Cliente</button>
+        </div>
+    </section>
 
-    let indice = 0;
-    function moverSlider(direccion) {
-      const slider = document.getElementById('slider');
-      indice = (indice + direccion + 4) % 4;
-      slider.style.transform = `translateX(-${indice * 100}%)`;
-    }
-  </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TravelPro</h3>
+                <p>La plataforma profesional de reservas de vuelos más confiable para agentes de viajes y viajeros exigentes.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📱</a>
+                    <a href="#" class="social-icon">📍</a>
+                    <a href="#" class="social-icon">👤</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Reserva de Vuelos</a></li>
+                    <li><a href="#">Gestión de Reservas</a></li>
+                    <li><a href="#">Panel de Agentes</a></li>
+                    <li><a href="#">Historial de Viajes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Soporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Políticas</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Conecta</h3>
+                <p>Mantente conectado con nosotros para las últimas actualizaciones y ofertas especiales.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelPro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Cambiar slide cada 5 segundos
+        setInterval(nextSlide, 5000);
+
+        // Smooth scrolling para los botones
+        document.querySelector('.btn-cta').addEventListener('click', function() {
+            document.querySelector('.features').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Animación para las tarjetas al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a las tarjetas
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Animación para los números estadísticos
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/\D/g, ''));
+                const suffix = counter.textContent.replace(/\d/g, '');
+                let current = 0;
+                const increment = target / 100;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current) + suffix;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Activar animación de contadores cuando la sección sea visible
+        const statsSection = document.querySelector('.stats');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsObserver.observe(statsSection);
+    </script>
 </body>
 </html>
