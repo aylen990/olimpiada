@@ -233,8 +233,48 @@
         </div>
     </section> -->
 
-    <footer></footer>
+<!-- Carrito -->
+<div class="cart-overlay" id="cart">
+  <div class="cart">
+    <div class="cart-header">
+      <h2>Mi Carrito <span class="units" id="units">(0 unidades)</span></h2>
+      <button class="close-cart" id="closeCart">✖</button>
+    </div>
 
+    <div class="cart-items" id="cartItems">
+      <!-- Ejemplo de ítem (se puede duplicar con JS) -->
+      <div class="cart-item" data-price="34335">
+        <img src="img/rubor.png" alt="Producto">
+        <div class="item-details">
+          <p><strong>Buenos Aires a Tokio</strong></p>
+          <p>Clase: Ejecutiva</p>
+          <div class="quantity">
+            <button class="minus">-</button>
+            <span class="qty">1</span>
+            <button class="plus">+</button>
+          </div>
+        </div>
+        <p class="price">$<span class="item-price">34335</span></p>
+        <button class="remove">🗑</button>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <p>Subtotal: <strong id="subtotal">$0</strong></p>
+      <p>Ahorraste: <span class="save">Ver detalle</span></p>
+      <p class="total">Total: <strong id="total">$0</strong></p>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </div>
+</div>
+
+   <!-- Fondo Oscuro -->
+    <div id="overlay" class="overlay"></div>
+
+
+
+    <footer></footer>
+    <script src="js/carrito.js"></script>
     <script src="js/inicio.js"></script>
     <script src="js/modulos.js"></script>
 </body>

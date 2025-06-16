@@ -47,23 +47,6 @@
             });
         });
 
-        // Menu toggle para móviles
-        const navToggle = document.querySelector('.nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('nav-menu-active');
-            navToggle.classList.toggle('nav-toggle-active');
-        });
-
-        // Cerrar menu al hacer click en un enlace
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('nav-menu-active');
-                navToggle.classList.remove('nav-toggle-active');
-            });
-        });
-
         // Animación para las tarjetas al hacer scroll
         const observerOptions = {
             threshold: 0.1,

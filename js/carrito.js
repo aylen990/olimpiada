@@ -1,60 +1,67 @@
-       let carrito = [];
+  const openCartBtn = document.getElementById('openCartBtn'); // <-- ahora es por ID
+  const closeCartBtn = document.getElementById('closeCart');
+  const cart = document.getElementById('cart');
+  const body = document.body;
+  const cartItems = document.getElementById('cartItems');
+  const subtotalEl = document.getElementById('subtotal');
+  const totalEl = document.getElementById('total');
+  const unitsEl = document.getElementById('units');
+  const overlay = document.getElementById('overlay');
 
-function agregarAlCarrito(nombre, precio) {
-    // Crear un objeto para el producto
-    const producto = {
-        nombre: nombre,
-        precio: precio,
-        cantidad: 1
-    };
-
-    // Verificar si el producto ya está en el carrito
-    const index = carrito.findIndex(item => item.nombre === nombre);
-    if (index !== -1) {
-        carrito[index].cantidad += 1;
-    } else {
-        carrito.push(producto);
-    }
-
-    actualizarCarrito();
-}
-
-function actualizarCarrito() {
-    const carritoTable = document.getElementById('contenido-carrito');
-    const totalElement = document.getElementById('total');
-    
-    // Limpiar el carrito
-    carritoTable.innerHTML = '';
-
-    let total = 0;
-
-    // Agregar cada producto al carrito
-    carrito.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.nombre}</td>
-            <td>${item.cantidad}</td>
-            <td>$${item.precio * item.cantidad}</td>
-            <td><button class="eliminar-btn" onclick="eliminarDelCarrito('${item.nombre}')">Eliminar</button></td>
-        `;
-        carritoTable.appendChild(row);
-        total += item.precio * item.cantidad;
+  function updateCartTotals() {
+    let subtotal = 0;
+    let units = 0;
+    document.querySelectorAll('.cart-item').forEach(item => {
+      const price = parseInt(item.getAttribute('data-price'));
+      const qty = parseInt(item.querySelector('.qty').textContent);
+      subtotal += price * qty;
+      units += qty;
+      item.querySelector('.item-price').textContent = price * qty;
     });
+    subtotalEl.textContent = `$${subtotal.toLocaleString()}`;
+    totalEl.textContent = `$${(subtotal).toLocaleString()}`;
+    unitsEl.textContent = `(${units} unidades)`;
+  }
+  openCartBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    openCart();
+  });
 
-    totalElement.textContent = `Total: $${total}`;
-}
+  closeCartBtn.addEventListener('click', closeCart);
+  overlay.addEventListener('click', closeCart);
 
-function eliminarDelCarrito(nombre) {
-    carrito = carrito.filter(item => item.nombre !== nombre);
-    actualizarCarrito();
-}
+  cartItems.addEventListener('click', function (e) {
+    const item = e.target.closest('.cart-item');
+    if (!item) return;
 
-function finalizarCompra() {
-    if (carrito.length === 0) {
-        alert("El carrito está vacío. No puedes finalizar la compra.");
-    } else {
-        alert("Compra finalizada. ¡Gracias por tu compra!");
-        carrito = [];
-        actualizarCarrito();
+    if (e.target.classList.contains('plus')) {
+      const qtyEl = item.querySelector('.qty');
+      qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
     }
+
+    if (e.target.classList.contains('minus')) {
+      const qtyEl = item.querySelector('.qty');
+      const current = parseInt(qtyEl.textContent);
+      if (current > 1) qtyEl.textContent = current - 1;
+    }
+
+    if (e.target.classList.contains('remove')) {
+      item.remove();
+    }
+
+    updateCartTotals();
+  });
+  function openCart() {
+  cart.style.display = 'flex';
+  overlay.style.display = 'block';
+  body.style.overflow = 'hidden'; // Bloquear scroll
 }
+
+function closeCart() {
+  cart.style.display = 'none';
+  overlay.style.display = 'none';
+  body.style.overflow = 'auto'; // Restaurar scroll
+}
+
+  // Inicializar totales
+  updateCartTotals();

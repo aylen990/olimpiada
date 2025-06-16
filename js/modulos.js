@@ -1,18 +1,19 @@
-const header=`
-        <nav class="navbar">
-            <div class="logo">TravelPro</div>
-            <ul class="nav-menu">
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                <li><a href="productos.html"><i class="fa-solid fa-wallet"></i> Productos</a></li>
-                <li><a href="micuenta.html"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
-                <li><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>`;
+const header = `
+    <nav class="navbar">
+        <div class="logo">TravelPro</div>
+        <ul class="nav-menu" id="menu-lateral">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="productos.html"><i class="fa-solid fa-wallet"></i> Productos</a></li>
+            <li><a href="micuenta.html"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
+            <li><a href="#" onclick="document.getElementById('cart').style.display='flex'"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+        </ul>
+        <div class="nav-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+`;
 const footer= `        <div class="footer-content">
             <div class="footer-section">
                 <h3>TravelPro</h3>
@@ -55,45 +56,11 @@ const footer= `        <div class="footer-content">
         </div>`
 document.querySelector('header').innerHTML=header;
 document.querySelector('footer').innerHTML=footer;
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu-lateral");
 
-// Agregar esta función al final de tu archivo modulos.js o en un archivo separado
-
-// Función para hacer funcionar el menú hamburguesa
-function initResponsiveMenu() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-        
-        // Cerrar el menú al hacer clic en un enlace
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-        
-        // Cerrar el menú al hacer clic fuera de él
-        document.addEventListener('click', function(event) {
-            if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
-        });
-    }
-}
-
-// Llamar la función después de que se cargue el DOM
-document.addEventListener('DOMContentLoaded', function() {
-    // Tu código existente aquí
-    document.querySelector('header').innerHTML = header;
-    document.querySelector('footer').innerHTML = footer;
-    
-    // Inicializar el menú responsive
-    initResponsiveMenu();
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
 });
