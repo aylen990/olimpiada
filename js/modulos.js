@@ -3,7 +3,7 @@ const header=`
             <div class="logo">TravelPro</div>
             <ul class="nav-menu">
                 <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                <li><a href="productos.html"><i class="fa-solid fa-passport"></i> Productos</a></li>
+                <li><a href="productos.html"><i class="fa-solid fa-wallet"></i> Productos</a></li>
                 <li><a href="micuenta.html"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
                 <li><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
             </ul>
