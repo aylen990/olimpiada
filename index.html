@@ -12,9 +12,16 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">TravelPro</div>
-            <div class="nav-buttons">
-                <button class="btn btn-outline">Iniciar Sesión</button>
-                <button class="btn btn-primary">Registrarse</button>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#mi-cuenta">Mi Cuenta</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
@@ -31,7 +38,156 @@
         <div class="hero-content">
             <h1>Descubre el Mundo</h1>
             <p>La plataforma profesional de reservas de vuelos más confiable</p>
-            <button class="btn-cta">Comenzar Ahora</button>
+            <div class="hero-buttons">
+                <button class="btn btn-outline">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de ofertas -->
+    <section class="offers">
+        <div class="container">
+            <h2 class="section-title">Ofertas Especiales</h2>
+            <p class="section-subtitle">Descubre los mejores destinos con precios increíbles</p>
+            
+            <div class="offers-slider-container">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="offers-slider">
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="París">
+                            <div class="offer-badge">25% OFF</div>
+                        </div>
+                        <div class="offer-content">
+                            <div class="offer-route">
+                                <span class="from">Buenos Aires</span>
+                                <i class="fas fa-plane"></i>
+                                <span class="to">París</span>
+                            </div>
+                            <div class="offer-price">
+                                <span class="price-old">$1,200</span>
+                                <span class="price-new">$899</span>
+                            </div>
+                            <div class="offer-details">
+                                <span class="offer-airline">Air France</span>
+                                <span class="offer-duration">12h 30m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tokio">
+                            <div class="offer-badge">30% OFF</div>
+                        </div>
+                        <div class="offer-content">
+                            <div class="offer-route">
+                                <span class="from">Buenos Aires</span>
+                                <i class="fas fa-plane"></i>
+                                <span class="to">Tokio</span>
+                            </div>
+                            <div class="offer-price">
+                                <span class="price-old">$1,800</span>
+                                <span class="price-new">$1,260</span>
+                            </div>
+                            <div class="offer-details">
+                                <span class="offer-airline">Japan Airlines</span>
+                                <span class="offer-duration">22h 45m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nueva York">
+                            <div class="offer-badge">20% OFF</div>
+                        </div>
+                        <div class="offer-content">
+                            <div class="offer-route">
+                                <span class="from">Buenos Aires</span>
+                                <i class="fas fa-plane"></i>
+                                <span class="to">Nueva York</span>
+                            </div>
+                            <div class="offer-price">
+                                <span class="price-old">$950</span>
+                                <span class="price-new">$760</span>
+                            </div>
+                            <div class="offer-details">
+                                <span class="offer-airline">American Airlines</span>
+                                <span class="offer-duration">10h 20m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Londres">
+                            <div class="offer-badge">15% OFF</div>
+                        </div>
+                        <div class="offer-content">
+                            <div class="offer-route">
+                                <span class="from">Buenos Aires</span>
+                                <i class="fas fa-plane"></i>
+                                <span class="to">Londres</span>
+                            </div>
+                            <div class="offer-price">
+                                <span class="price-old">$1,100</span>
+                                <span class="price-new">$935</span>
+                            </div>
+                            <div class="offer-details">
+                                <span class="offer-airline">British Airways</span>
+                                <span class="offer-duration">13h 15m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Madrid">
+                            <div class="offer-badge">18% OFF</div>
+                        </div>
+                        <div class="offer-content">
+                            <div class="offer-route">
+                                <span class="from">Buenos Aires</span>
+                                <i class="fas fa-plane"></i>
+                                <span class="to">Madrid</span>
+                            </div>
+                            <div class="offer-price">
+                                <span class="price-old">$850</span>
+                                <span class="price-new">$697</span>
+                            </div>
+                            <div class="offer-details">
+                                <span class="offer-airline">Iberia</span>
+                                <span class="offer-duration">12h 05m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Roma">
+                            <div class="offer-badge">22% OFF</div>
+                        </div>
+                        <div class="offer-content">
+                            <div class="offer-route">
+                                <span class="from">Buenos Aires</span>
+                                <i class="fas fa-plane"></i>
+                                <span class="to">Roma</span>
+                            </div>
+                            <div class="offer-price">
+                                <span class="price-old">$1,300</span>
+                                <span class="price-new">$1,014</span>
+                            </div>
+                            <div class="offer-details">
+                                <span class="offer-airline">Alitalia</span>
+                                <span class="offer-duration">14h 30m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
         </div>
     </section>
 
@@ -87,11 +243,11 @@
         </div>
     </section>
 
-    <section class="client-section">
+    <!-- <section class="client-section">
         <div class="container">
             <button class="client-button">Soy Cliente</button>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
         <div class="footer-content">
@@ -151,10 +307,55 @@
         // Cambiar slide cada 5 segundos
         setInterval(nextSlide, 5000);
 
-        // Smooth scrolling para los botones
-        document.querySelector('.btn-cta').addEventListener('click', function() {
-            document.querySelector('.features').scrollIntoView({
+        // Offers Slider
+        let currentOfferSlide = 0;
+        const offerSlider = document.querySelector('.offers-slider');
+        const offerCards = document.querySelectorAll('.offer-card');
+        const totalOfferCards = offerCards.length;
+        const cardsPerView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+
+        function updateOfferSlider() {
+            const translateX = -currentOfferSlide * (100 / cardsPerView);
+            offerSlider.style.transform = `translateX(${translateX}%)`;
+        }
+
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            currentOfferSlide = currentOfferSlide > 0 ? currentOfferSlide - 1 : totalOfferCards - cardsPerView;
+            updateOfferSlider();
+        });
+
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentOfferSlide = currentOfferSlide < totalOfferCards - cardsPerView ? currentOfferSlide + 1 : 0;
+            updateOfferSlider();
+        });
+
+        // Auto-slide para ofertas
+        setInterval(() => {
+            currentOfferSlide = currentOfferSlide < totalOfferCards - cardsPerView ? currentOfferSlide + 1 : 0;
+            updateOfferSlider();
+        }, 7000);
+
+        // Smooth scrolling para el hero hacia ofertas
+        document.querySelector('.hero-buttons .btn-primary').addEventListener('click', function() {
+            document.querySelector('.offers').scrollIntoView({
                 behavior: 'smooth'
+            });
+        });
+
+        // Menu toggle para móviles
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-active');
+            navToggle.classList.toggle('nav-toggle-active');
+        });
+
+        // Cerrar menu al hacer click en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-menu-active');
+                navToggle.classList.remove('nav-toggle-active');
             });
         });
 
@@ -179,6 +380,23 @@
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'all 0.6s ease';
             observer.observe(card);
+        });
+
+        // Aplicar animación a las tarjetas de ofertas
+        document.querySelectorAll('.offer-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Responsive handling
+        window.addEventListener('resize', () => {
+            const newCardsPerView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+            if (newCardsPerView !== cardsPerView) {
+                currentOfferSlide = 0;
+                updateOfferSlider();
+            }
         });
     </script>
 </body>
