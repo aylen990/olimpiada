@@ -18,11 +18,6 @@ const footer= `        <div class="footer-content">
             <div class="footer-section">
                 <h3>TravelPro</h3>
                 <p>La plataforma profesional de reservas de vuelos más confiable para agentes de viajes y viajeros exigentes.</p>
-                <div class="social-icons">
-                    <a href=" " class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href=" " class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href=" " class="social-icon"><i class="fab fa-instagram"></i></a>
-                </div>
             </div>
             
             <div class="footer-section">
@@ -39,7 +34,6 @@ const footer= `        <div class="footer-content">
                 <h3>Soporte</h3>
                 <ul class="footer-links">
                     <li><a href="#">Centro de Ayuda</a></li>
-                    <li><a href="#">Contacto</a></li>
                     <li><a href="#">Políticas</a></li>
                     <li><a href="#">Términos de Uso</a></li>
                 </ul>
@@ -48,6 +42,11 @@ const footer= `        <div class="footer-content">
             <div class="footer-section">
                 <h3>Conecta</h3>
                 <p>Mantente conectado con nosotros para las últimas actualizaciones y ofertas especiales.</p>
+                <div class="social-icons">
+                    <a href=" " class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href=" " class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href=" " class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
         
