@@ -77,7 +77,13 @@
             card.style.transition = 'all 0.6s ease';
             observer.observe(card);
         });
-
+        // Aplicar animación a cada viaje
+        document.querySelectorAll('.viaje-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
+        });
         // Responsive handling
         window.addEventListener('resize', () => {
             const newCardsPerView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;

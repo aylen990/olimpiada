@@ -404,6 +404,94 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.viajes{
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.viajes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.viaje-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-left: 5px solid #003366;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.viaje-item p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.viaje-item .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.viaje-item .btn-primary {
+    background-color:#ff6b00 ;
+    color: #fff;
+}
+
+.viaje-item .btn-primary:hover {
+    background-color:#b34a00 ;
+}
+/* Descripción oculta */
+.viaje-item .descripcion {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Mostrar al hacer hover */
+.viaje-item:hover .descripcion {
+    max-height: 100px;
+    opacity: 1;
+}
+
+.ver-mas-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #0056b3;
+}
+
 
 /* Client Section */
 /* .client-section {
