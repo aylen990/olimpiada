@@ -5,7 +5,7 @@ const header = `
             <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
             <li><a href="productos.html"><i class="fa-solid fa-wallet"></i> Productos</a></li>
             <li><a href="micuenta.html"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
-            <li><a href="#" onclick="document.getElementById('cart').style.display='flex'"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+            <li><a href="#" id="openCart"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
         </ul>
         <div class="nav-toggle" id="menu-toggle">
             <span></span>
