@@ -1,4 +1,4 @@
-  const openCartBtn = document.getElementById('openCartBtn'); // <-- ahora es por ID
+  const openCartBtn = document.getElementById('openCartBtn'); z
   const closeCartBtn = document.getElementById('closeCart');
   const cart = document.getElementById('cart');
   const body = document.body;
