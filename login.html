@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olimpíada de Programación - 2025</title>
+    <link rel="stylesheet" href="css/estilosgenerales.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/estilosgenerales.css">
 </head>
 <body>
     <header></header>
@@ -31,6 +31,39 @@
   <button class="button-confirm" onclick="location.href='index.html'">Continuar →</button>
 </form>
 </section>
+<!-- Carrito -->
+<div class="cart-overlay" id="cart">
+  <div class="cart">
+    <div class="cart-header">
+      <h2>Mi Carrito <span class="units" id="units">(0 unidades)</span></h2>
+      <button class="close-cart" id="closeCart">✖</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <div class="cart-item" data-price="34335">
+        <img src="img/rubor.png" alt="Producto">
+        <div class="item-details">
+          <p><strong>Buenos Aires a Tokio</strong></p>
+          <p>Clase: Ejecutiva</p>
+          <div class="quantity">
+            <button class="minus">-</button>
+            <span class="qty">1</span>
+            <button class="plus">+</button>
+          </div>
+        </div>
+        <p class="price">$<span class="item-price">34335</span></p>
+        <button class="remove">🗑</button>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <p>Subtotal: <strong id="subtotal">$0</strong></p>
+      <p>Ahorraste: <span class="save">Ver detalle</span></p>
+      <p class="total">Total: <strong id="total">$0</strong></p>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </div>
+</div>
     <script src="js/carrito.js"></script>
     <script src="js/modulos.js"></script>
 </body>
