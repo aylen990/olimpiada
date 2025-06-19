@@ -1,67 +1,74 @@
-  const openCartBtn = document.getElementById('openCartBtn'); z
-  const closeCartBtn = document.getElementById('closeCart');
-  const cart = document.getElementById('cart');
-  const body = document.body;
-  const cartItems = document.getElementById('cartItems');
-  const subtotalEl = document.getElementById('subtotal');
-  const totalEl = document.getElementById('total');
-  const unitsEl = document.getElementById('units');
-  const overlay = document.getElementById('overlay');
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cartOverlay = document.getElementById("cart");
+  const backdrop = document.getElementById("backdrop");
+  const openCartBtn = document.getElementById("openCart");
+  const closeCartBtn = document.getElementById("closeCart");
+  const cartItems = document.getElementById("cartItems");
+  const subtotalEl = document.getElementById("subtotal");
+  const totalEl = document.getElementById("total");
+  const unitsEl = document.getElementById("units");
 
   function updateCartTotals() {
     let subtotal = 0;
     let units = 0;
-    document.querySelectorAll('.cart-item').forEach(item => {
-      const price = parseInt(item.getAttribute('data-price'));
-      const qty = parseInt(item.querySelector('.qty').textContent);
-      subtotal += price * qty;
+
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent);
+      const price = parseFloat(item.dataset.price);
+      subtotal += qty * price;
       units += qty;
-      item.querySelector('.item-price').textContent = price * qty;
+      item.querySelector(".item-price").textContent = (qty * price).toFixed(2);
     });
-    subtotalEl.textContent = `$${subtotal.toLocaleString()}`;
-    totalEl.textContent = `$${(subtotal).toLocaleString()}`;
-    unitsEl.textContent = `(${units} unidades)`;
+
+    const total = subtotal * 0.95; // 5% de descuento
+    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    totalEl.textContent = `$${total.toFixed(2)}`;
+    unitsEl.textContent = `(${units} ${units === 1 ? "unidad" : "unidades"})`;
   }
-  openCartBtn?.addEventListener('click', (e) => {
+
+  function openCart() {
+    cartOverlay.style.display = "flex";
+    backdrop.style.display = "block";
+    document.body.style.overflow = "hidden";
+    updateCartTotals();
+  }
+
+  function closeCart() {
+    cartOverlay.style.display = "none";
+    backdrop.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  openCartBtn.addEventListener("click", (e) => {
     e.preventDefault();
     openCart();
   });
 
-  closeCartBtn.addEventListener('click', closeCart);
-  overlay.addEventListener('click', closeCart);
+  closeCartBtn.addEventListener("click", closeCart);
+  backdrop.addEventListener("click", closeCart);
 
-  cartItems.addEventListener('click', function (e) {
-    const item = e.target.closest('.cart-item');
+  // Eventos para sumar, restar y eliminar
+  cartItems.addEventListener("click", (e) => {
+    const item = e.target.closest(".cart-item");
     if (!item) return;
 
-    if (e.target.classList.contains('plus')) {
-      const qtyEl = item.querySelector('.qty');
-      qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
-    }
+    const qtyEl = item.querySelector(".qty");
+    let qty = parseInt(qtyEl.textContent);
 
-    if (e.target.classList.contains('minus')) {
-      const qtyEl = item.querySelector('.qty');
-      const current = parseInt(qtyEl.textContent);
-      if (current > 1) qtyEl.textContent = current - 1;
-    }
-
-    if (e.target.classList.contains('remove')) {
+    if (e.target.classList.contains("plus")) {
+      qty++;
+    } else if (e.target.classList.contains("minus") && qty > 1) {
+      qty--;
+    } else if (e.target.classList.contains("remove")) {
       item.remove();
+      updateCartTotals();
+      return;
     }
 
+    qtyEl.textContent = qty;
     updateCartTotals();
   });
-  function openCart() {
-  cart.style.display = 'flex';
-  overlay.style.display = 'block';
-  body.style.overflow = 'hidden'; // Bloquear scroll
-}
 
-function closeCart() {
-  cart.style.display = 'none';
-  overlay.style.display = 'none';
-  body.style.overflow = 'auto'; // Restaurar scroll
-}
-
-  // Inicializar totales
-  updateCartTotals();
+  updateCartTotals(); // Al cargar
+});
