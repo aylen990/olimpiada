@@ -463,13 +463,14 @@ body {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.40s ease;
 }
 
 /* Mostrar al hacer hover */
 .viaje-item:hover .descripcion {
     max-height: 100px;
     opacity: 1;
+    transition: all 0.40s ease;
 }
 
 .ver-mas-container {
@@ -485,11 +486,10 @@ body {
     color: #fff;
     border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.2s ease;
 }
 
 .btn-ver-mas:hover {
-    background-color: #0056b3;
+    background-color: #02356b;
 }
 
 
