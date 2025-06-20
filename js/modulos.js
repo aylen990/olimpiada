@@ -4,7 +4,7 @@ const header = `
         <ul class="nav-menu" id="menu-lateral">
             <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
             <li><a href="productos.html"><i class="fa-solid fa-wallet"></i> Productos</a></li>
-            <li><a href="#" id="btnMiCuenta"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
+            <li><a href="micuenta.html"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
             <li><a href="#" id="openCart"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
         </ul>
         <div class="nav-toggle" id="menu-toggle">
