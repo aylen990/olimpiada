@@ -1,5 +1,13 @@
-
 document.addEventListener("DOMContentLoaded", () => {
+  const btnVerDetalle = document.getElementById("verDetalle");
+  const detalleDescuento = document.getElementById("detalleDescuento");
+
+  if (btnVerDetalle && detalleDescuento) {
+    btnVerDetalle.addEventListener("click", () => {
+      detalleDescuento.classList.toggle("visible");
+    });
+  }
+
   const cartOverlay = document.getElementById("cart");
   const backdrop = document.getElementById("backdrop");
   const openCartBtn = document.getElementById("openCart");
@@ -8,6 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const subtotalEl = document.getElementById("subtotal");
   const totalEl = document.getElementById("total");
   const unitsEl = document.getElementById("units");
+  const checkoutBtn = document.querySelector(".checkout-btn"); // 👈 Agregado
+
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", () => {
+      alert("Compra finalizada ✅");
+      closeCart();
+    });
+  }
 
   function updateCartTotals() {
     let subtotal = 0;
@@ -70,5 +86,5 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartTotals();
   });
 
-  updateCartTotals(); // Al cargar
+  updateCartTotals();
 });
