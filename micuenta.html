@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Cuenta</title>
+  <link rel="stylesheet" href="css/miCuenta.css">
+  <link rel="stylesheet" href="css/estilosgenerales.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
+  <!-- Botón simulado para abrir el modal -->
+  <!-- <button id="openAccount">Mi Cuenta</button> -->
+
+  <!-- FONDO OSCURO Y MODAL DE CUENTA -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeBtn" class="close">&times;</span>
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Usuario" class="user-icon">
+      <h2>Mi Cuenta</h2>
+      <p><strong>Nombre:</strong> Ayelén López</p>
+      <p><strong>Email:</strong> ayelen@email.com</p>
+      <p><strong>Último pedido:</strong> 12/06/2025 - Paquete a Mendoza</p>
+      <p><strong>Pedidos pendientes:</strong> 1</p>
+      <p><strong>Total gastado:</strong> $125.000</p>
+      <button class="logout-btn">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <script src="js/modulos.js"></script>
+  <script>
+    const modal = document.getElementById("modal");
+    const openBtn = document.getElementById("openAccount");
+    const closeBtn = document.getElementById("closeBtn");
+
+    openBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  </script>
 </body>
 </html>

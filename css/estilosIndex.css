@@ -455,7 +455,7 @@ body {
 .viaje-item .btn-primary:hover {
     background-color:#b34a00 ;
 }
-/* Descripción oculta */
+
 .viaje-item .descripcion {
     margin-top: 0.5rem;
     font-size: 0.9rem;
@@ -494,7 +494,7 @@ body {
 
 
 /* Client Section */
-/* .client-section {
+.client-section {
     padding: 3rem 2rem;
     background: white;
     text-align: center;
@@ -520,7 +520,7 @@ body {
 
 .client-button::before {
     content: "👤";
-} */
+}
 
 
 /* Responsive Design */

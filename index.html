@@ -265,11 +265,11 @@
         </div>
     </section>
 
-    <!-- <section class="client-section">
+    <section class="client-section">
         <div class="container">
-            <button class="client-button">Soy Cliente</button>
+            <button class="client-button"onclick="location.href='jefeVentas.html'">Soy Jefe de Ventas</button>
         </div>
-    </section> -->
+    </section>
 
 <!-- Carrito -->
 <div class="cart-overlay" id="cart">
@@ -307,10 +307,28 @@
     </div>
   </div>
 </div>
+<!-- MODAL DE MI CUENTA -->
+<div id="modalMiCuenta" class="modal hidden">
+  <div class="modal-content">
+    <span id="cerrarModal" class="close">&times;</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Usuario" class="user-icon">
+    <h2>Mi Cuenta</h2>
+    <p><strong>Nombre:</strong> Ayelén López</p>
+    <p><strong>Email:</strong> ayelen@email.com</p>
+    <p><strong>Último pedido:</strong> 12/06/2025 - Paquete a Mendoza</p>
+    <p><strong>Pedidos pendientes:</strong> 1</p>
+    <p><strong>Total gastado:</strong> $125.000</p>
+    <button class="logout-btn">Cerrar sesión</button>
+  </div>
+</div>
+
 <div id="backdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:1500;"></div>
     <footer></footer>
     <script src="js/carrito.js"></script>
     <script src="js/inicio.js"></script>
     <script src="js/modulos.js"></script>
+    <script>
+  const abrir = document.getElementById("btnMiCuenta");
+</script>
 </body>
 </html>

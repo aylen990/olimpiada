@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+.page-title {
+  text-align: left;
+  font-size: 2.5rem;
+  color: #003366;
+  font-weight: 700;
+  position: relative;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.container {
+  max-width: 1000px; 
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Diseño uniforme para todas las cards */
+.card {
+  background: #f6f6f6e3;
+  padding: 2.5rem;
+  border: 1px solid #f6f6f6;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin-bottom: 2.5rem;
+  border-left: 3px solid #003366;
+}
+
+/* Títulos uniformes - TODOS con el mismo color */
+.card h2 {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Inputs uniformes */
+form input,
+.card input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #888888;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  background: #f3f3f3;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+form input:focus,
+.card input:focus {
+  outline: none;
+  border-color: #003366;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.08), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones uniformes con sombra negra - TODOS iguales */
+.card button {
+  background: #ff6b00;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0.4rem 0.6rem 0.4rem 0;
+  min-width: 140px;
+  font-family: inherit;
+  /* Sombra negra uniforme para todos los botones */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card button:hover {
+  background: #e65a00;
+  transform: translateY(-2px);
+  /* Sombra más intensa en hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de botones */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+/* Eliminamos todos los estilos específicos - ahora todo es uniforme */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
+  }
+  
+  .card button {
+    width: 100%;
+    margin: 0.3rem 0;
+  }
+}
+
+/* Efectos adicionales para mejorar la consistencia visual */
+.card form {
+  position: relative;
+}
+
+.card form::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  right: -1rem;
+  bottom: -1rem;
+  background: linear-gradient(135deg, rgba(0, 51, 102, 0.02) 0%, rgba(255, 107, 0, 0.02) 100%);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+/* Último card sin margen inferior */
+.card:last-child {
+  margin-bottom: 0;
+}

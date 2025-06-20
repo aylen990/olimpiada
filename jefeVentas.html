@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel Jefe de Ventas</title>
+  <link rel="stylesheet" href="css/jefeVentas.css"/>
+  <link rel="stylesheet" href="css/estilosgenerales.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header></header>
+
+  <main class="container">
+    <h1 class="page-title">Panel de Jefe de Ventas</h1>
+    <section class="card">
+      <h2>Cargar Productos</h2>
+      <form>
+        <input type="text" placeholder="Código del producto" required />
+        <input type="text" placeholder="Descripción" required />
+        <input type="number" placeholder="Precio unitario" required />
+        <button type="submit">Guardar producto</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Consultar Lista de Productos</h2>
+      <button>Ver productos</button>
+    </section>
+
+    <section class="card">
+      <h2>Pedidos Pendientes</h2>
+      <button>Ver pedidos</button>
+      <button>Realizar entrega</button>
+    </section>
+
+    <section class="card">
+      <h2>Estado de Cuenta</h2>
+      <button>Facturas por fecha</button>
+      <button>Estado por cliente</button>
+    </section>
+
+    <section class="card">
+      <h2>Anular Pedido</h2>
+      <input type="text" placeholder="N° de pedido" />
+      <button>Anular</button>
+    </section>
+  </main>
+
+  <footer></footer>
+  <script src="js/modulos.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>

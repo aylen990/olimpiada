@@ -4,7 +4,7 @@ const header = `
         <ul class="nav-menu" id="menu-lateral">
             <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
             <li><a href="productos.html"><i class="fa-solid fa-wallet"></i> Productos</a></li>
-            <li><a href="micuenta.html"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
+            <li><a href="#" id="btnMiCuenta"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
             <li><a href="#" id="openCart"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
         </ul>
         <div class="nav-toggle" id="menu-toggle">
@@ -21,15 +21,6 @@ const footer= `        <div class="footer-content">
                 <p>La plataforma profesional de reservas de vuelos más confiable para agentes de viajes y viajeros exigentes.</p>
             </div>
             
-            <div class="footer-section">
-                <h3>Servicios</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Reserva de Vuelos</a></li>
-                    <li><a href="#">Gestión de Reservas</a></li>
-                    <li><a href="#">Panel de Agentes</a></li>
-                    <li><a href="#">Historial de Viajes</a></li>
-                </ul>
-            </div>
             
             <div class="footer-section">
                 <h3>Soporte</h3>
