@@ -35,8 +35,8 @@ const footer= `        <div class="footer-content">
                 <h3>Soporte</h3>
                 <ul class="footer-links">
                     <li><a href="centroDeAyuda.html">Centro de Ayuda</a></li>
-                    <li><a href="#">Políticas</a></li>
-                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="politicas.html">Políticas</a></li>
+                    <li><a href="terminosDeUso.html">Términos de Uso</a></li>
                 </ul>
             </div>
             
