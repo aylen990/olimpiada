@@ -14,6 +14,7 @@ const header = `
         </div>
     </nav>
 `;
+document.querySelector('header').innerHTML=header;
 const footer= `        <div class="footer-content">
             <div class="footer-section">
                 <h3>TravelPro</h3>
@@ -53,7 +54,6 @@ const footer= `        <div class="footer-content">
         <div class="footer-bottom">
             <p>&copy; 2024 TravelPro. Todos los derechos reservados.</p>
         </div>`
-document.querySelector('header').innerHTML=header;
 document.querySelector('footer').innerHTML=footer;
 document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("menu-toggle");

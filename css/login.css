@@ -128,3 +128,6 @@ a:hover {
   box-shadow: 1px 1px #33333396;
   transform: translate(3px, 3px);
 }
+footer{
+  display: none;
+}
