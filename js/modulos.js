@@ -20,17 +20,7 @@ const footer= `        <div class="footer-content">
                 <div class="logo" style="color: white">TravelPro</div><br>
                 <p>La plataforma profesional de reservas de vuelos más confiable para agentes de viajes y viajeros exigentes.</p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Servicios</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Reserva de Vuelos</a></li>
-                    <li><a href="#">Gestión de Reservas</a></li>
-                    <li><a href="#">Panel de Agentes</a></li>
-                    <li><a href="#">Historial de Viajes</a></li>
-                </ul>
-            </div>
-            
+               
             <div class="footer-section">
                 <h3>Soporte</h3>
                 <ul class="footer-links">
@@ -62,3 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("show");
     });
 });
+
+            // <div class="footer-section">
+            //     <h3>Servicios</h3>
+            //     <ul class="footer-links">
+            //         <li><a href="#">Reserva de Vuelos</a></li>
+            //         <li><a href="#">Gestión de Reservas</a></li>
+            //         <li><a href="#">Panel de Agentes</a></li>
+            //         <li><a href="#">Historial de Viajes</a></li>
+            //     </ul>
+            // </div>
