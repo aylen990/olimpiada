@@ -18,32 +18,25 @@
 .container {
   max-width: 1000px; 
   margin: 40px auto;
-  background-color: white;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Diseño uniforme para todas las cards */
 .card {
   background: #f6f6f6e3;
   padding: 2.5rem;
   border: 1px solid #f6f6f6;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.338);
   position: relative;
   margin-bottom: 2.5rem;
-  border-left: 3px solid #003366;
+  border: 2px solid #00336635;
 }
 
-/* Títulos uniformes - TODOS con el mismo color */
 .card h2 {
-  margin-bottom: 2rem;
-  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.60rem;
   color: #003366;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -77,12 +70,11 @@ form input:focus,
   box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.08), 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Botones uniformes con sombra negra - TODOS iguales */
 .card button {
   background: #ff6b00;
   color: #ffffff;
   border: none;
-  padding: 1rem 2rem;
+  padding: 12px 25px;
   border-radius: 12px;
   cursor: pointer;
   font-weight: 600;
@@ -93,7 +85,6 @@ form input:focus,
   margin: 0.4rem 0.6rem 0.4rem 0;
   min-width: 140px;
   font-family: inherit;
-  /* Sombra negra uniforme para todos los botones */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 

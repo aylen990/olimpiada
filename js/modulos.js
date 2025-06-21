@@ -17,7 +17,7 @@ const header = `
 document.querySelector('header').innerHTML=header;
 const footer= `        <div class="footer-content">
             <div class="footer-section">
-                <h3>TravelPro</h3>
+                <div class="logo" style="color: white">TravelPro</div><br>
                 <p>La plataforma profesional de reservas de vuelos más confiable para agentes de viajes y viajeros exigentes.</p>
             </div>
             
@@ -34,9 +34,8 @@ const footer= `        <div class="footer-content">
             <div class="footer-section">
                 <h3>Soporte</h3>
                 <ul class="footer-links">
-                    <li><a href="centroDeAyuda.html">Centro de Ayuda</a></li>
-                    <li><a href="politicas.html">Políticas</a></li>
-                    <li><a href="terminosDeUso.html">Términos de Uso</a></li>
+                    <li><a href="centroDeAyuda.html">Centro de Ayuda | soporte@tusitio.com</a></li>
+                    <li><a href="terminosDeUso.html">Términos y condiciones</a></li>
                 </ul>
             </div>
             

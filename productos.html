@@ -13,7 +13,10 @@
     <section id="product-list">
   <div class="product-list-header">
     <h2>Todos los viajes</h2>
+    <div class="search-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
     <input type="text" id="search" placeholder="Buscar viajes...">
+  </div>
   </div>
   <ul>
     <li>
@@ -66,7 +69,7 @@
     <div class="cart-items" id="cartItems">
       <!-- Ejemplo de ítem (se puede duplicar con JS) -->
       <div class="cart-item" data-price="34335">
-        <img src="img/rubor.png" alt="Producto">
+        <!-- <img src="img/rubor.png" alt="Producto"> -->
         <div class="item-details">
           <p><strong>Buenos Aires a Tokio</strong></p>
           <p>Clase: Ejecutiva</p>
@@ -77,7 +80,7 @@
           </div>
         </div>
         <p class="price">$<span class="item-price">34335</span></p>
-        <button class="remove">🗑</button>
+        <button class="remove"><i class="fa-regular fa-trash-can"></i></button>
       </div>
     </div>
 

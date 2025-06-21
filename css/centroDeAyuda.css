@@ -4,7 +4,7 @@
   color: #003366;
   font-weight: 700;
   position: relative;
-  padding-top: 4.5rem;
+  padding-top: 4.7rem;
   margin-bottom: 3rem;
     }
 
@@ -41,7 +41,7 @@
       gap: 15px;
       font-size: 16px;
       font-weight: 500;
-      color: #666;
+      color: #353535;
       border: 1px solid #e9ecef;
       box-shadow: 0 2px 4px rgba(0,0,0,0.04);
     }
@@ -52,16 +52,16 @@
     }
 
     .sidebar li.active {
-      background-color: #007bff;
+      background-color: #003366;
       color: white;
-      border-color: #007bff;
+      border-color: #003366;
     }
 
     .sidebar li i {
       font-size: 18px;
       width: 20px;
       text-align: center;
-      color: #007bff;
+      color: #003366;
     }
 
     .sidebar li.active i {
@@ -102,7 +102,7 @@
       cursor: pointer;
       font-size: 16px;
       font-weight: 500;
-      color: #333;
+      color: #353535;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -143,7 +143,7 @@
     }
 
     .faq-answer p {
-      color: #666;
+      color: #424242;
       font-size: 15px;
       line-height: 1.6;
       margin-top: 10px;

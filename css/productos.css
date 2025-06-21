@@ -1,17 +1,16 @@
 
 #product-list {
-    max-width: 1000px; 
+    max-width: 1100px; 
     margin: 40px auto;
-    background-color: white;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #product-list h2 {
-    text-align: center;
+    text-align: left;
     color: #004a91;
     margin-bottom: 30px;
+    padding-top: 2rem;
+    font-size: 35px;
 }
 
 #product-list ul {
@@ -30,13 +29,6 @@
     border-left: 5px solid #004a91;
 }
 
-#product-list p {
-    margin: 0;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-/* Botones */
 #agregar {
     padding: 10px 15px;
     border: none;
@@ -45,7 +37,7 @@
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-/* Título + buscador */
+
 .product-list-header {
     display: flex;
     justify-content: space-between;
@@ -58,17 +50,32 @@
     color: #003366;
     margin: 0;
 }
+.search-container {
+  position: relative;
+}
 
+.search-container i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
 #search {
     padding: 10px 15px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
     width: 250px;
     max-width: 100%;
+     padding: 10px 10px 10px 40px; 
+}
+#search:hover{
+    border: 2px solid #0e0e0e;
+    
 }
 
-/* Estética lista coherente */
 #product-list li {
     background-color: #fdfdfd;
     margin-bottom: 20px;
@@ -83,15 +90,19 @@
 
 #product-list p {
     margin: 0;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #222;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #393939;
+    font-family: inherit;
 }
 
 #product-list button {
     background-color: #ff6b00;
     color: #fff;
     border-radius: 6px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 #product-list button:hover {
