@@ -24,7 +24,7 @@ const footer= `        <div class="footer-content">
             <div class="footer-section">
                 <h3>Soporte</h3>
                 <ul class="footer-links">
-                    <li><a href="centroDeAyuda.html">Centro de Ayuda | soporte@tusitio.com</a></li>
+                    <li><a href="centroDeAyuda.html">Centro de Ayuda</a></li>
                     <li><a href="terminosDeUso.html">Términos y condiciones</a></li>
                 </ul>
             </div>
