@@ -164,3 +164,10 @@
 .btn-peligro:hover {
     background: #ff3700;
 }
+
+@media (max-width: 768px) {
+    .contenido-principal{
+        padding: 5px;
+        padding-top: 30px;
+    }
+}
