@@ -7,18 +7,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilosgenerales.css">
     <link rel="stylesheet" href="css/miCuenta.css">
+
 </head>
 <body>
     <header></header>
+    
     <main>
+        <!-- Botón menú móvil -->
+        <div class="menu-mobile-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <div class="cuenta-container">
+            <!-- Menú lateral -->
+            <nav class="menu-lateral" id="menuLateral">
+                <div class="menu-header">
+                    <h3>Mi Cuenta</h3>
+                </div>
+                <ul class="menu-opciones">
+                    <li>
+                        <a href="#sobre-mi" class="menu-link active" data-section="sobre-mi">
+                            <span class="icon">👤</span>
+                            Sobre mí
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#info-personal" class="menu-link" data-section="info-personal">
+                            <span class="icon">📋</span>
+                            Información personal
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sesion" class="menu-link" data-section="sesion">
+                            <span class="icon">🔐</span>
+                            Sesión
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
+            <!-- Contenido principal -->
             <div class="contenido-principal">
-
-                <section id="sobre-mi">
+                <!-- Sección Sobre mí -->
+                <section id="sobre-mi" class="seccion-cuenta active">
                     <div class="seccion-header">
-                        <h2><i class="fa-solid fa-user"></i> Mi Cuenta</h2>
+                        <h2>Sobre mí</h2>
                         <p>Información general de tu perfil</p>
                     </div>
                     <div class="tarjeta-info">
@@ -45,6 +80,7 @@
                     </div>
                 </section>
 
+                <!-- Sección Información personal -->
                 <section id="info-personal" class="seccion-cuenta">
                     <div class="seccion-header">
                         <h2>Información personal</h2>
@@ -56,34 +92,45 @@
                                 <label>Nombre completo</label>
                                 <div class="input-display">
                                     <span>Juan Pérez Rodríguez</span>
+                                    <button class="btn-editar">Editar</button>
                                 </div>
                             </div>
                             <div class="campo">
                                 <label>Correo electrónico</label>
                                 <div class="input-display">
                                     <span>juan.perez@email.com</span>
+                                    <button class="btn-editar">Editar</button>
+                                </div>
+                            </div>
+                            <div class="campo">
+                                <label>Contraseña</label>
+                                <div class="input-display">
+                                    <span>••••••••••••</span>
+                                    <button class="btn-editar">Cambiar</button>
                                 </div>
                             </div>
                             <div class="campo">
                                 <label>Teléfono</label>
                                 <div class="input-display">
                                     <span>+54 11 1234-5678</span>
+                                    <button class="btn-editar">Editar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <!-- Sección Sesión -->
                 <section id="sesion" class="seccion-cuenta">
                     <div class="seccion-header">
                         <h2>Sesión</h2>
                         <p>Administra tu sesión y seguridad</p>
                     </div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <h4 style="margin-top: 1rem;">Cambiar contraseña</h4>
+                    <div class="tarjeta-info">
+                        <div class="opciones-sesion">
+                            <div class="opcion-sesion">
+                                <div class="opcion-info">
+                                    <h4>Cambiar contraseña</h4>
                                     <p>Actualiza tu contraseña regularmente para mantener tu cuenta segura</p>
                                 </div>
                                 <button class="btn-accion btn-secundario">Cambiar contraseña</button>
@@ -118,7 +165,7 @@
             </div>
         </div>
     </main>
-
+    <!-- Carrito -->
 <div class="cart-overlay" id="cart">
   <div class="cart">
     <div class="cart-header">
@@ -128,7 +175,7 @@
 
     <div class="cart-items" id="cartItems">
       <div class="cart-item" data-price="34335">
-        <!-- <img src="img/rubor.png" alt="Producto"> -->
+        <img src="img/rubor.png" alt="Producto">
         <div class="item-details">
           <p><strong>Buenos Aires a Tokio</strong></p>
           <p>Clase: Ejecutiva</p>
@@ -139,7 +186,7 @@
           </div>
         </div>
         <p class="price">$<span class="item-price">34335</span></p>
-        <button class="remove"><i class="fa-regular fa-trash-can"></i></button>
+        <button class="remove">🗑</button>
       </div>
     </div>
 
@@ -159,5 +206,60 @@
     
     <script src="js/modulos.js"></script>
     <script src="js/carrito.js"></script>
+    <script>
+        // Script para funcionalidad del menú móvil y navegación
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuLateral = document.getElementById('menuLateral');
+            const backdrop = document.getElementById('backdrop');
+            const menuLinks = document.querySelectorAll('.menu-link');
+            const secciones = document.querySelectorAll('.seccion-cuenta');
+
+            // Toggle menú móvil
+            menuToggle.addEventListener('click', function() {
+                menuLateral.classList.toggle('active');
+                backdrop.style.display = menuLateral.classList.contains('active') ? 'block' : 'none';
+            });
+
+            // Cerrar menú al hacer click en backdrop
+            backdrop.addEventListener('click', function() {
+                menuLateral.classList.remove('active');
+                backdrop.style.display = 'none';
+            });
+
+            // Navegación entre secciones
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remover clase active de todos los links
+                    menuLinks.forEach(l => l.classList.remove('active'));
+                    // Agregar clase active al link clickeado
+                    this.classList.add('active');
+                    
+                    // Ocultar todas las secciones
+                    secciones.forEach(s => s.classList.remove('active'));
+                    
+                    // Mostrar sección correspondiente
+                    const targetSection = this.getAttribute('data-section');
+                    document.getElementById(targetSection).classList.add('active');
+                    
+                    // Cerrar menú móvil si está abierto
+                    if (window.innerWidth <= 768) {
+                        menuLateral.classList.remove('active');
+                        backdrop.style.display = 'none';
+                    }
+                });
+            });
+
+            // Cerrar menú al redimensionar ventana
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    menuLateral.classList.remove('active');
+                    backdrop.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

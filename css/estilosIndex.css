@@ -48,7 +48,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 60vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,14 +171,14 @@ body {
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: #333;
 }
 
 .section-subtitle {
     text-align: center;
     color: #666;
-    margin-bottom: 0.5rem;
+    margin-bottom: 3rem;
     font-size: 1.1rem;
 }
 
@@ -326,6 +326,7 @@ body {
     right: 2px;
 }
 
+/* Features Section */
 .features {
     padding: 0.5rem 2rem;
     background: white;
@@ -346,11 +347,11 @@ body {
     text-align: center;
     transition: all 0.3s ease;
 }
-/* 
+
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.35);
-} */
+}
 
 .feature-icon {
     font-size: 3rem;
@@ -404,9 +405,12 @@ body {
     letter-spacing: 1px;
 }
 .viajes{
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto;
+    background-color: #fff;
     padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .viajes-list {
@@ -419,8 +423,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
     border-left: 5px solid #003366;
     background-color: #fdfdfd;
     border-radius: 8px;
@@ -459,7 +463,7 @@ body {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.6s ease;
+    transition: all 0.40s ease;
 }
 
 /* Mostrar al hacer hover */
@@ -478,18 +482,14 @@ body {
     display: inline-block;
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
-    background-color: #004b9b;
-    color: white;
-    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
     text-decoration: none;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.20);
 }
 
 .btn-ver-mas:hover {
-    background-color: #003366;
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
-    transition: all 0.3s ease;
+    background-color: #02356b;
 }
 
 
