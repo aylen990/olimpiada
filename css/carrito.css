@@ -60,7 +60,6 @@ button:hover {
     background-color: #218838;
 }
 
-/* Estilos del carrito */
 #carrito {
     flex: 1;
     width: 40%;
@@ -109,7 +108,7 @@ table th {
     background-color: #0056b3;
 }
 .eliminar-btn {
-    background-color: #dc3545; /* rojo tipo Bootstrap */
+    background-color: #dc3545; 
     color: white;
     border: none;
     padding: 6px 8px;
